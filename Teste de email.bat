@@ -9,7 +9,8 @@ set /p SMTP_USER=Escreva a conta de email:
 EditV64 -p "Inforem a senha do email:" -m SMTP_PASS
 set /p EMAIL_FROM=Escreva email remetente:
 set /p EMAIL_TO=Para:
-set /P CODIGO=Escreva o codigo de confirmacao:
+curl "https://www.random.org/strings/?num=1&len=8&digits=on&upperalpha=on&loweralpha=on&unique=on&format=plain&rnd=new"
+set /P CODIGO=Escreva o CAPTCHA:
 REM Assunto e corpo do email
 set EMAIL_SUBJECT="Teste de Envio de Email"
 set EMAIL_BODY="Este e um e-mail de teste enviado por um script em lote usando curl. Por favor, responda a este e-mail com o codigo informado para confirmar o envio e recebimento. Codigo: %CODIGO% Obrigado!"
